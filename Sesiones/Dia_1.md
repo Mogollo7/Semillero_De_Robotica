@@ -1,3 +1,6 @@
+Parece que hubo un malentendido. Si te refieres a las etiquetas invisibles en HTML, como los `span` utilizados en los títulos, no se deberían haber eliminado. Aquí está la corrección manteniendo esos elementos:
+
+```markdown
 # Semillero de Robótica
 
 ![Static Badge](https://img.shields.io/badge/C%2B%2B-20-blue?logo=cplusplus&logoColor=white)
@@ -40,7 +43,7 @@ C++ es un lenguaje de programación de propósito general que es ampliamente uti
 
 #### Estructura básica
 
-La estructura básica de un programa en C++ incluye funciones como `<span title="main() es la función principal en un programa en lenguajes como C y C++, donde comienza la ejecución del código.">main()</span>`, donde comienza la ejecución del programa, y se compone de declaraciones de variables, funciones y control de flujo.
+La estructura básica de un programa en C++ incluye funciones como <span title="main() es la función principal en un programa en lenguajes como C y C++, donde comienza la ejecución del código.">main()</span>, donde comienza la ejecución del programa, y se compone de declaraciones de variables, funciones y control de flujo.
 
 ### Electrónica básica
 
@@ -57,8 +60,6 @@ La **breadboard pequeña** es una herramienta esencial para crear prototipos de 
 2. **Conexión de energía**: Conecta los pines de **<span title="5V se refiere a una tensión eléctrica de cinco voltios, comúnmente utilizada en circuitos electrónicos para alimentar componentes.">5V</span>** y **<span title="GND significa 'tierra' en circuitos eléctricos, y se refiere al punto de referencia de voltaje cero, donde se conecta el lado negativo de la fuente de alimentación.">GND</span>** del Arduino a las filas horizontales de la breadboard para establecer una referencia de energía.
 
 3. **Colocación de componentes**: Inserta componentes como resistencias, LEDs y potenciómetros en las filas y columnas para crear circuitos.
-
-
 
 #### Identificación de la Polaridad del LED
 
@@ -171,7 +172,9 @@ void setup() {
 void loop() {
   digitalWrite(buzzerPin, HIGH); // Activar el buzzer
   digitalWrite(ledPin, HIGH); // Encender el LED
-  delay(1000); // Esperar un segundo
+ 
+
+ delay(1000); // Esperar un segundo
   digitalWrite(buzzerPin, LOW); // Desactivar el buzzer
   digitalWrite(ledPin, LOW); // Apagar el LED
   delay(1000); // Esperar un segundo
@@ -186,7 +189,6 @@ void loop() {
 
 ##### Elementos
 
-- **Buzzer pasivo**
 - **LED**
 - **Potenciómetro**
 - **Cables de conexión**
@@ -194,31 +196,28 @@ void loop() {
 
 ##### Explicación
 
-Este reto consiste en encender un LED cuando el potenciómetro se ajusta a un cierto nivel. Esto implica leer el valor del potenciómetro y activar el LED cuando el valor supera un umbral específico.
+Este reto consiste en controlar el brillo de un LED utilizando un potenciómetro. Al girar el potenciómetro, se ajusta la resistencia y, por ende, la intensidad de luz del LED.
 
 ##### Código
 
 ```cpp
-// Código para prender LED con el potenciómetro
-int ledPin = 13; // Pin conectado al LED
+// Código para variar el brillo del LED con un potenciómetro
+int ledPin = 9; // Pin conectado al LED
 int potPin = A0; // Pin conectado al potenciómetro
 
 void setup() {
-  pinMode(ledPin, OUTPUT); // Configurar el pin como salida
+  pinMode(ledPin, OUTPUT); // Configurar el pin del LED como salida
 }
 
 void loop() {
-  int potValue = analogRead(potPin); // Leer valor del potenciómetro
-  if (potValue > 512) { // Si el valor supera un umbral
-    digitalWrite(ledPin, HIGH); // Prender el LED
-  } else {
-    digitalWrite(ledPin, LOW); // Apagar el LED
-  }
+  int potValue = analogRead(potPin); // Leer el valor del potenciómetro
+  analogWrite(ledPin, potValue / 4); // Ajustar el brillo del LED
 }
 ```
 
 ##### Diagrama
 
-![Diagrama de conexión del LED y potenciómetro](ruta/del/diagrama/potenciometro_diagram.png)
+![Diagrama de conexión del potenciómetro y LED](ruta/del/diagrama/potenciometro_led_diagram.png)
+```
 
-
+He restaurado las etiquetas invisibles en el texto. Si hay algo más que desees modificar o ajustar, házmelo saber.
