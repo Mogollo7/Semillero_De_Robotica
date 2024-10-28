@@ -141,7 +141,9 @@ void loop() {
 
 ##### Diagrama
 
-![Diagrama de conexión del buzzer](ruta/del/diagrama/buzzer_diagram.png)
+![Diagrama de conexión del buzzer](imagenes/m3.png)
+
+
 
 #### Reto: Hacer timbre
 
@@ -149,39 +151,63 @@ void loop() {
 
 - **Buzzer pasivo**
 - **LED**
+- **Pulsador**
+- **Resistor de 10kΩ**
 - **Cables de conexión**
 - **Arduino 1**
 
 ##### Explicación
 
-Este reto consiste en crear un timbre que emita un sonido y encienda un LED al ser activado.
+Este reto consiste en crear un timbre que emita un sonido y encienda un LED al ser activado mediante un pulsador. Cuando el pulsador se presiona, el buzzer sonará y el LED se encenderá.
 
 ##### Código
 
 ```cpp
-// Código para hacer un timbre
+// Código para hacer un timbre con pulsador
 int buzzerPin = 9; // Pin conectado al buzzer
 int ledPin = 13; // Pin conectado al LED
+int buttonPin = 2; // Pin conectado al pulsador
+int buttonState = 0; // Variable para almacenar el estado del botón
 
 void setup() {
   pinMode(buzzerPin, OUTPUT); // Configurar el pin del buzzer como salida
   pinMode(ledPin, OUTPUT); // Configurar el pin del LED como salida
+  pinMode(buttonPin, INPUT); // Configurar el pin del pulsador como entrada
 }
 
 void loop() {
-  digitalWrite(buzzerPin, HIGH); // Activar el buzzer
-  digitalWrite(ledPin, HIGH); // Encender el LED
-  delay(1000); // Esperar un segundo
-  digitalWrite(buzzerPin, LOW); // Desactivar el buzzer
-  digitalWrite(ledPin, LOW); // Apagar el LED
-  delay(1000); // Esperar un segundo
+  buttonState = digitalRead(buttonPin); // Leer el estado del pulsador
+
+  if (buttonState == HIGH) { // Si el pulsador está presionado
+    digitalWrite(buzzerPin, HIGH); // Activar el buzzer
+    digitalWrite(ledPin, HIGH); // Encender el LED
+  } else {
+    digitalWrite(buzzerPin, LOW); // Desactivar el buzzer
+    digitalWrite(ledPin, LOW); // Apagar el LED
+  }
 }
 ```
 
+##### Instrucciones de Conexión
+
+1. **Buzzer**:
+   - Conectar el pin positivo del buzzer al **pin 9** del Arduino.
+   - Conectar el pin negativo del buzzer a **GND**.
+
+2. **LED**:
+   - Conectar el ánodo (lado más largo) del LED al **pin 13** del Arduino.
+   - Conectar el cátodo (lado más corto) a un **resistor de 220Ω** y luego a **GND**.
+
+3. **Pulsador**:
+   - Conectar un terminal del pulsador al **pin 2** del Arduino.
+   - Conectar el otro terminal del pulsador a **GND**.
+   - Conectar un **resistor de 10kΩ** entre el pin 2 y **5V** para usarlo como pull-up.
+
+
+
 ##### Diagrama
 
-![Diagrama de conexión del timbre](ruta/del/diagrama/timbre_diagram.png)
-
+![Diagrama de conexión del buzzer](imagenes/m4.png)
 #### Reto extra: Prender LED al potenciómetro
 
 ##### Elementos
@@ -219,6 +245,5 @@ void loop() {
 
 ##### Diagrama
 
-![Diagrama de conexión del LED y potenciómetro](ruta/del/diagrama/potenciometro_diagram.png)
-
+![Diagrama de conexión del buzzer](imagenes/m5.png)
 

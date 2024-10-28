@@ -5,6 +5,16 @@
 ![Static Badge](https://img.shields.io/badge/Tinkercad-Web-orange?logo=tinkercad&logoColor=white)
 ![Static Badge](https://img.shields.io/badge/mBlock-5.4.3-blue?logo=mblock&logoColor=white)
 
+## Índice
+
+1. [Descripción](#descripción)
+2. [Objetivos](#objetivos)
+3. [Tecnologías Utilizadas](#tecnologías-utilizadas)
+4. [Instalación](#instalación)
+5. [Licencia](#licencia)
+6. [Autor](#autor)
+
+
 ## Descripción
 Este proyecto pertenece al semillero de robótica de la Universidad La Salle. Se utilizará un **Arduino Uno**, además de los robots de mBlock como el **Ranger** y otros modelos, para programar distintos comportamientos y funcionalidades en robótica.
 
