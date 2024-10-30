@@ -54,7 +54,13 @@ La **breadboard pequeña** es una herramienta esencial para crear prototipos de 
 
 1. **Filas y columnas**: Las filas horizontales se utilizan para la alimentación positiva y tierra, mientras que las columnas verticales conectan componentes.
 
-2. **Conexión de energía**: Conecta los pines de **<span title="5V se refiere a una tensión eléctrica de cinco voltios, comúnmente utilizada en circuitos electrónicos para alimentar componentes.">5V</span>** y **<span title="GND significa 'tierra' en circuitos eléctricos, y se refiere al punto de referencia de voltaje cero, donde se conecta el lado negativo de la fuente de alimentación.">GND</span>** del Arduino a las filas horizontales de la breadboard para establecer una referencia de energía.
+Aquí tienes el texto corregido con cohesión y coherencia mejoradas, manteniendo el contenido original y destacando los términos técnicos con `<span>`:
+
+
+2. **Conexión de energía**: Conecta los pines de **<span title="5V se refiere a una tensión eléctrica de cinco voltios, comúnmente utilizada en circuitos electrónicos para alimentar componentes.">5V</span>** y **<span title="GND significa 'tierra' en circuitos eléctricos, y se refiere al punto de referencia de voltaje cero, donde se conecta el lado negativo de la fuente de alimentación.">GND</span>** del Arduino a las filas horizontales de la breadboard para establecer una referencia de energía. Esto permitirá que el cable rojo positivo esté conectado a los **<span>5V</span>** del Arduino y el negro al **<span>GND</span>**. Así, toda la breadboard tendrá un flujo constante de energía sin puntos sin circulación.
+
+> Nota: Al utilizar **<span title="5V se refiere a una tensión eléctrica de cinco voltios, comúnmente utilizada en circuitos electrónicos para alimentar componentes.">5V</span>**, es recomendable añadir resistencias en el circuito. 
+
 
 3. **Colocación de componentes**: Inserta componentes como resistencias, LEDs y potenciómetros en las filas y columnas para crear circuitos.
 
