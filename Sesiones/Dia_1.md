@@ -40,7 +40,7 @@ C++ es un lenguaje de programación de propósito general que es ampliamente uti
 
 #### Estructura básica
 
-La estructura básica de un programa en C++ incluye funciones como `<span title="main() es la función principal en un programa en lenguajes como C y C++, donde comienza la ejecución del código.">main()</span>`, donde comienza la ejecución del programa, y se compone de declaraciones de variables, funciones y control de flujo.
+La estructura básica de un programa en C++ incluye funciones como <span title="main() es la función principal en un programa en lenguajes como C y C++, donde comienza la ejecución del código.">main()</span>, donde comienza la ejecución del programa, y se compone de declaraciones de variables, funciones y control de flujo.
 
 ### Electrónica básica
 
